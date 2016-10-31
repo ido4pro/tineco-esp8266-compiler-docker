@@ -55,7 +55,7 @@ RUN cd /opt && git clone --recursive https://github.com/pfalcon/esp-open-sdk.git
 RUN chmod 777 -R /opt/esp-open-sdk
 
 USER espbuilder
-RUN cd /opt/esp-open-sdk && make STANDALONE=y
+RUN cd /opt/esp-open-sdk && sed -i "/^VENDOR_SDK\s=\s.*$/VENDOR_SDK = 1.5.4/" Makefile && make STANDALONE=y
 
 USER root
 
