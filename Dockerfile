@@ -4,42 +4,34 @@ FROM phusion/baseimage:0.9.18
 # Install Dependencies
 # ------------------------------------------------------------------------------
 
-RUN apt-get update 
-RUN apt-get install -y make
-RUN apt-get install -y wget 
-RUN apt-get install -y unrar 
-RUN apt-get install -y 	autoconf 
-RUN apt-get install -y 	automake 
-
-RUN apt-get update
-RUN apt-get install -y 	libtool
-
-RUN apt-get install -y 	gcc 
-RUN apt-get install -y 	g++ 
-RUN apt-get install -y 	gperf 
-RUN apt-get install -y 	flex 
-RUN apt-get install -y 	bison 
-RUN apt-get install -y 	texinfo 
-RUN apt-get install -y 	gawk 
-RUN apt-get install -y 	ncurses-dev 
-RUN apt-get install -y 	libexpat-dev 
-RUN apt-get install -y 	python2.7-dev 
-RUN apt-get install -y 	python-serial 
-
-
-RUN apt-get install -y 	sed
-RUN apt-get install -y 	git 
-RUN apt-get install -y 	unzip 
-RUN apt-get install -y 	bash 	
-RUN apt-get install -y 	wget 
-RUN apt-get install -y 	bzip2 
-RUN apt-get install -y 	vim 
-RUN apt-get install -y 	screen 
-RUN apt-get install -y 	sudo
-
-RUN apt-get install -y help2man	
-
-RUN apt-get update
+RUN apt-get update && apt-get install -y \
+	make \
+	wget \
+	unrar \
+	autoconf \
+	automake \
+	libtool \
+	gcc \
+	g++ \
+	gperf \
+	flex \
+	bison \
+	texinfo \
+	gawk \
+	ncurses-dev \
+	libexpat-dev \
+	python2.7-dev \
+	python-serial \
+	sed \
+	git \
+	unzip \
+	bash \
+	wget \
+	bzip2 \
+	vim \
+	screen \
+	sudo \
+	help2man
 
 # ------------------------------------------------------------------------------
 # Install ESP8266 SDK
